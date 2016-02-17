@@ -5,9 +5,6 @@ Your challenge, if you wish to accept it (and we sure hope you will), is to opti
 To get started, check out the repository, inspect the code,
 
 ### Getting started
-
-####Part 1: Optimize PageSpeed Insights score for index.html
-
 Some useful tips to help you get started:
 
 1. Check out the repository
@@ -25,16 +22,24 @@ Some useful tips to help you get started:
   $> cd /path/to/your-project-folder
   $> ngrok 8080
   ```
+  1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
 
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
+  Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
+####Part 1: Optimize PageSpeed Insights score for index.html
+-I changed the media type to print for css/print.css
+-Got rid of the google fonts <link> and moved DOMContentLoaded down 75ms and used webfontloader instead
+-Inlined CSS, async'd other JS (like Google Analytics)
+-96/100 on PageSpeed Insights!
+
 
 ####Part 2: Optimize Frames per Second in pizza.html
 a) Optimize scrolling animations to maintain >60fps
 -Baselined the page and saw that frames were taking 23-25ms each. This is well above the 10ms allotted to A(Animations) in the RAIL framework.
 -First, and most simply, I noticed that a constant of 200 background pizzas were being created and thus animated on scroll while only 18 were visible on screen. I reduced to 18 but then saw a couple background pizzas were missing now. Went back up and settled in at 22 pizzas. Measured and saw a huge improvement: frames were loading at 3.7-5.7ms each.
 -Then, I looked at the Timeline tab of Dev Tools and saw that I was entering a forced reflow state because of a lot of calculations on the whole document within the UpdatePositions function.
+-Noticed a document wide read call made within the loop that I moved outside the loop. Measured:
+0.31ms-0.47ms - improved by another factor!
 
 b) Optimize resize Pizzas to respond in under 5ms
 

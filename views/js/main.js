@@ -423,6 +423,7 @@ var resizePizzas = function(size) {
 
   // Determines the new width based on the size and iterates through pizza elements changing their widths.
     function changePizzaSizes (size) {
+      // Switch statement determines percentage widths
       switch(size) {
         case "1":
           newWidth = 25;
@@ -436,6 +437,7 @@ var resizePizzas = function(size) {
         default:
           console.log("bug in sizeSwitcher");
       }
+      // Iterate through all pizzas and change their widths
       var allPizzas = document.querySelectorAll(".randomPizzaContainer");
       for (var i = 0; i < allPizzas.length; i++) {
       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newWidth + "%";
