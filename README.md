@@ -31,8 +31,19 @@ Some useful tips to help you get started:
 Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 ####Part 2: Optimize Frames per Second in pizza.html
+a) Optimize scrolling animations to maintain >60fps
+-Baselined the page and saw that frames were taking 23-25ms each. This is well above the 10ms allotted to A(Animations) in the RAIL framework.
+-First, and most simply, I noticed that a constant of 200 background pizzas were being created and thus animated on scroll while only 18 were visible on screen. I reduced to 18 but then saw a couple background pizzas were missing now. Went back up and settled in at 22 pizzas. Measured and saw a huge improvement: frames were loading at 3.7-5.7ms each.
+-Then, I looked at the Timeline tab of Dev Tools and saw that I was entering a forced reflow state because of a lot of calculations on the whole document within the UpdatePositions function.
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+b) Optimize resize Pizzas to respond in under 5ms
+
+-First I baselined to see that a resize action was taking >100ms. Looking into Chrome dev tools timeline, it was clear that most of the jank was being caused by the changePizzaSizes function in main.js. This would be an R (Response) under the RAIL framework allowing 100ms but still...
+-I noticed a for loop which was repeatedly calculating several variables: querying the DOM for all pizzaContainers, calculating dx, and then calculating newwidth. Since I knew all of these would be constant in any particular call of the function, I moved them outside of the for loop. At this point, it was running at ~4.5ms per resize.
+-Going further, I realized that the whole dx function is unnecessary. Instead stored the output of the switch statement as the % width needed and simply applied that. This got resize to <3ms per resize.
+
+
+To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
