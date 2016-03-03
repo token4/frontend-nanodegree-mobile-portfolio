@@ -1,0 +1,361 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/TK/.nvm/versions/node/v5.2.0/bin/node',
+1 verbose cli   '/Users/TK/.nvm/versions/node/v5.2.0/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'grunt-cli',
+1 verbose cli   'npm',
+1 verbose cli   'install',
+1 verbose cli   '-save-dev',
+1 verbose cli   'grunt',
+1 verbose cli   'touch',
+1 verbose cli   'gruntfile.js' ]
+2 info using npm@2.14.15
+3 info using node@v5.2.0
+4 verbose install initial load of /Users/TK/.nvm/versions/node/v5.2.0/lib/package.json
+5 verbose readDependencies loading dependencies from /Users/TK/.nvm/versions/node/v5.2.0/lib/package.json
+6 silly cache add args [ 'grunt-cli', null ]
+7 verbose cache add spec grunt-cli
+8 silly cache add args [ 'npm', null ]
+9 verbose cache add spec npm
+10 silly cache add args [ 'install', null ]
+11 verbose cache add spec install
+12 silly cache add args [ 'grunt', null ]
+13 verbose cache add spec grunt
+14 silly cache add args [ 'touch', null ]
+15 verbose cache add spec touch
+16 silly cache add args [ 'gruntfile.js', null ]
+17 verbose cache add spec gruntfile.js
+18 silly cache add parsed spec Result {
+18 silly cache add   raw: 'grunt-cli',
+18 silly cache add   scope: null,
+18 silly cache add   name: 'grunt-cli',
+18 silly cache add   rawSpec: '',
+18 silly cache add   spec: 'latest',
+18 silly cache add   type: 'tag' }
+19 silly addNamed grunt-cli@latest
+20 verbose addNamed "latest" is being treated as a dist-tag for grunt-cli
+21 info addNameTag [ 'grunt-cli', 'latest' ]
+22 silly mapToRegistry name grunt-cli
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry uri https://registry.npmjs.org/grunt-cli
+26 verbose addNameTag registry:https://registry.npmjs.org/grunt-cli not in flight; fetching
+27 silly cache add parsed spec Result {
+27 silly cache add   raw: 'npm',
+27 silly cache add   scope: null,
+27 silly cache add   name: 'npm',
+27 silly cache add   rawSpec: '',
+27 silly cache add   spec: 'latest',
+27 silly cache add   type: 'tag' }
+28 silly addNamed npm@latest
+29 verbose addNamed "latest" is being treated as a dist-tag for npm
+30 info addNameTag [ 'npm', 'latest' ]
+31 silly mapToRegistry name npm
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry uri https://registry.npmjs.org/npm
+35 verbose addNameTag registry:https://registry.npmjs.org/npm not in flight; fetching
+36 silly cache add parsed spec Result {
+36 silly cache add   raw: 'install',
+36 silly cache add   scope: null,
+36 silly cache add   name: 'install',
+36 silly cache add   rawSpec: '',
+36 silly cache add   spec: 'latest',
+36 silly cache add   type: 'tag' }
+37 silly addNamed install@latest
+38 verbose addNamed "latest" is being treated as a dist-tag for install
+39 info addNameTag [ 'install', 'latest' ]
+40 silly mapToRegistry name install
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/install
+44 verbose addNameTag registry:https://registry.npmjs.org/install not in flight; fetching
+45 silly cache add parsed spec Result {
+45 silly cache add   raw: 'grunt',
+45 silly cache add   scope: null,
+45 silly cache add   name: 'grunt',
+45 silly cache add   rawSpec: '',
+45 silly cache add   spec: 'latest',
+45 silly cache add   type: 'tag' }
+46 silly addNamed grunt@latest
+47 verbose addNamed "latest" is being treated as a dist-tag for grunt
+48 info addNameTag [ 'grunt', 'latest' ]
+49 silly mapToRegistry name grunt
+50 silly mapToRegistry using default registry
+51 silly mapToRegistry registry https://registry.npmjs.org/
+52 silly mapToRegistry uri https://registry.npmjs.org/grunt
+53 verbose addNameTag registry:https://registry.npmjs.org/grunt not in flight; fetching
+54 silly cache add parsed spec Result {
+54 silly cache add   raw: 'touch',
+54 silly cache add   scope: null,
+54 silly cache add   name: 'touch',
+54 silly cache add   rawSpec: '',
+54 silly cache add   spec: 'latest',
+54 silly cache add   type: 'tag' }
+55 silly addNamed touch@latest
+56 verbose addNamed "latest" is being treated as a dist-tag for touch
+57 info addNameTag [ 'touch', 'latest' ]
+58 silly mapToRegistry name touch
+59 silly mapToRegistry using default registry
+60 silly mapToRegistry registry https://registry.npmjs.org/
+61 silly mapToRegistry uri https://registry.npmjs.org/touch
+62 verbose addNameTag registry:https://registry.npmjs.org/touch not in flight; fetching
+63 silly cache add parsed spec Result {
+63 silly cache add   raw: 'gruntfile.js',
+63 silly cache add   scope: null,
+63 silly cache add   name: 'gruntfile.js',
+63 silly cache add   rawSpec: '',
+63 silly cache add   spec: 'latest',
+63 silly cache add   type: 'tag' }
+64 silly addNamed gruntfile.js@latest
+65 verbose addNamed "latest" is being treated as a dist-tag for gruntfile.js
+66 info addNameTag [ 'gruntfile.js', 'latest' ]
+67 silly mapToRegistry name gruntfile.js
+68 silly mapToRegistry using default registry
+69 silly mapToRegistry registry https://registry.npmjs.org/
+70 silly mapToRegistry uri https://registry.npmjs.org/gruntfile.js
+71 verbose addNameTag registry:https://registry.npmjs.org/gruntfile.js not in flight; fetching
+72 verbose request uri https://registry.npmjs.org/gruntfile.js
+73 verbose request no auth needed
+74 info attempt registry request try #1 at 9:57:22 PM
+75 verbose request id 52ff862ac6bf1b76
+76 http request GET https://registry.npmjs.org/gruntfile.js
+77 verbose request uri https://registry.npmjs.org/install
+78 verbose request no auth needed
+79 info attempt registry request try #1 at 9:57:22 PM
+80 verbose etag "A1ZM1KZZGCD4VCC1TADNV8GL2"
+81 http request GET https://registry.npmjs.org/install
+82 verbose request uri https://registry.npmjs.org/grunt-cli
+83 verbose request no auth needed
+84 info attempt registry request try #1 at 9:57:22 PM
+85 verbose etag "7Q15TK4Y4L679HL7KVOXTMOZX"
+86 http request GET https://registry.npmjs.org/grunt-cli
+87 verbose request uri https://registry.npmjs.org/touch
+88 verbose request no auth needed
+89 info attempt registry request try #1 at 9:57:22 PM
+90 verbose etag "E1HTGB5B7TWNEPHLU14DHYSSB"
+91 http request GET https://registry.npmjs.org/touch
+92 verbose request uri https://registry.npmjs.org/grunt
+93 verbose request no auth needed
+94 info attempt registry request try #1 at 9:57:22 PM
+95 verbose etag "AGNRN535PPLJM8HP8IFLRZ1OX"
+96 http request GET https://registry.npmjs.org/grunt
+97 verbose request uri https://registry.npmjs.org/npm
+98 verbose request no auth needed
+99 info attempt registry request try #1 at 9:57:22 PM
+100 verbose etag "9LUASD910L4PPVCGY7TBB85CT"
+101 http request GET https://registry.npmjs.org/npm
+102 http 304 https://registry.npmjs.org/grunt
+103 verbose headers { date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+103 verbose headers   via: '1.1 varnish',
+103 verbose headers   'cache-control': 'max-age=300',
+103 verbose headers   etag: '"AGNRN535PPLJM8HP8IFLRZ1OX"',
+103 verbose headers   age: '252',
+103 verbose headers   connection: 'keep-alive',
+103 verbose headers   'x-served-by': 'cache-lax1435-LAX',
+103 verbose headers   'x-cache': 'HIT',
+103 verbose headers   'x-cache-hits': '2',
+103 verbose headers   'x-timer': 'S1454651842.617133,VS0,VE0',
+103 verbose headers   vary: 'Accept' }
+104 silly get cb [ 304,
+104 silly get   { date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+104 silly get     via: '1.1 varnish',
+104 silly get     'cache-control': 'max-age=300',
+104 silly get     etag: '"AGNRN535PPLJM8HP8IFLRZ1OX"',
+104 silly get     age: '252',
+104 silly get     connection: 'keep-alive',
+104 silly get     'x-served-by': 'cache-lax1435-LAX',
+104 silly get     'x-cache': 'HIT',
+104 silly get     'x-cache-hits': '2',
+104 silly get     'x-timer': 'S1454651842.617133,VS0,VE0',
+104 silly get     vary: 'Accept' } ]
+105 verbose etag https://registry.npmjs.org/grunt from cache
+106 verbose get saving grunt to /Users/TK/.npm/registry.npmjs.org/grunt/.cache.json
+107 silly addNameTag next cb for grunt with tag latest
+108 silly addNamed grunt@0.4.5
+109 verbose addNamed "0.4.5" is a plain semver version for grunt
+110 http 304 https://registry.npmjs.org/npm
+111 verbose headers { date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+111 verbose headers   via: '1.1 varnish',
+111 verbose headers   'cache-control': 'max-age=300',
+111 verbose headers   etag: '"9LUASD910L4PPVCGY7TBB85CT"',
+111 verbose headers   age: '5',
+111 verbose headers   connection: 'keep-alive',
+111 verbose headers   'x-served-by': 'cache-lax1434-LAX',
+111 verbose headers   'x-cache': 'HIT',
+111 verbose headers   'x-cache-hits': '2',
+111 verbose headers   'x-timer': 'S1454651842.631853,VS0,VE0',
+111 verbose headers   vary: 'Accept' }
+112 silly get cb [ 304,
+112 silly get   { date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+112 silly get     via: '1.1 varnish',
+112 silly get     'cache-control': 'max-age=300',
+112 silly get     etag: '"9LUASD910L4PPVCGY7TBB85CT"',
+112 silly get     age: '5',
+112 silly get     connection: 'keep-alive',
+112 silly get     'x-served-by': 'cache-lax1434-LAX',
+112 silly get     'x-cache': 'HIT',
+112 silly get     'x-cache-hits': '2',
+112 silly get     'x-timer': 'S1454651842.631853,VS0,VE0',
+112 silly get     vary: 'Accept' } ]
+113 verbose etag https://registry.npmjs.org/npm from cache
+114 verbose get saving npm to /Users/TK/.npm/registry.npmjs.org/npm/.cache.json
+115 http 304 https://registry.npmjs.org/install
+116 verbose headers { date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+116 verbose headers   via: '1.1 varnish',
+116 verbose headers   'cache-control': 'max-age=300',
+116 verbose headers   etag: '"A1ZM1KZZGCD4VCC1TADNV8GL2"',
+116 verbose headers   age: '285',
+116 verbose headers   connection: 'keep-alive',
+116 verbose headers   'x-served-by': 'cache-lax1435-LAX',
+116 verbose headers   'x-cache': 'HIT',
+116 verbose headers   'x-cache-hits': '1',
+116 verbose headers   'x-timer': 'S1454651842.631585,VS0,VE0',
+116 verbose headers   vary: 'Accept' }
+117 silly get cb [ 304,
+117 silly get   { date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+117 silly get     via: '1.1 varnish',
+117 silly get     'cache-control': 'max-age=300',
+117 silly get     etag: '"A1ZM1KZZGCD4VCC1TADNV8GL2"',
+117 silly get     age: '285',
+117 silly get     connection: 'keep-alive',
+117 silly get     'x-served-by': 'cache-lax1435-LAX',
+117 silly get     'x-cache': 'HIT',
+117 silly get     'x-cache-hits': '1',
+117 silly get     'x-timer': 'S1454651842.631585,VS0,VE0',
+117 silly get     vary: 'Accept' } ]
+118 verbose etag https://registry.npmjs.org/install from cache
+119 verbose get saving install to /Users/TK/.npm/registry.npmjs.org/install/.cache.json
+120 http 304 https://registry.npmjs.org/touch
+121 verbose headers { date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+121 verbose headers   via: '1.1 varnish',
+121 verbose headers   'cache-control': 'max-age=300',
+121 verbose headers   etag: '"E1HTGB5B7TWNEPHLU14DHYSSB"',
+121 verbose headers   age: '49',
+121 verbose headers   connection: 'keep-alive',
+121 verbose headers   'x-served-by': 'cache-lax1432-LAX',
+121 verbose headers   'x-cache': 'HIT',
+121 verbose headers   'x-cache-hits': '1',
+121 verbose headers   'x-timer': 'S1454651842.642498,VS0,VE0',
+121 verbose headers   vary: 'Accept' }
+122 silly get cb [ 304,
+122 silly get   { date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+122 silly get     via: '1.1 varnish',
+122 silly get     'cache-control': 'max-age=300',
+122 silly get     etag: '"E1HTGB5B7TWNEPHLU14DHYSSB"',
+122 silly get     age: '49',
+122 silly get     connection: 'keep-alive',
+122 silly get     'x-served-by': 'cache-lax1432-LAX',
+122 silly get     'x-cache': 'HIT',
+122 silly get     'x-cache-hits': '1',
+122 silly get     'x-timer': 'S1454651842.642498,VS0,VE0',
+122 silly get     vary: 'Accept' } ]
+123 verbose etag https://registry.npmjs.org/touch from cache
+124 verbose get saving touch to /Users/TK/.npm/registry.npmjs.org/touch/.cache.json
+125 http 304 https://registry.npmjs.org/grunt-cli
+126 verbose headers { date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+126 verbose headers   via: '1.1 varnish',
+126 verbose headers   'cache-control': 'max-age=300',
+126 verbose headers   etag: '"7Q15TK4Y4L679HL7KVOXTMOZX"',
+126 verbose headers   age: '226',
+126 verbose headers   connection: 'keep-alive',
+126 verbose headers   'x-served-by': 'cache-lax1425-LAX',
+126 verbose headers   'x-cache': 'HIT',
+126 verbose headers   'x-cache-hits': '1',
+126 verbose headers   'x-timer': 'S1454651842.641078,VS0,VE0',
+126 verbose headers   vary: 'Accept' }
+127 silly get cb [ 304,
+127 silly get   { date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+127 silly get     via: '1.1 varnish',
+127 silly get     'cache-control': 'max-age=300',
+127 silly get     etag: '"7Q15TK4Y4L679HL7KVOXTMOZX"',
+127 silly get     age: '226',
+127 silly get     connection: 'keep-alive',
+127 silly get     'x-served-by': 'cache-lax1425-LAX',
+127 silly get     'x-cache': 'HIT',
+127 silly get     'x-cache-hits': '1',
+127 silly get     'x-timer': 'S1454651842.641078,VS0,VE0',
+127 silly get     vary: 'Accept' } ]
+128 verbose etag https://registry.npmjs.org/grunt-cli from cache
+129 verbose get saving grunt-cli to /Users/TK/.npm/registry.npmjs.org/grunt-cli/.cache.json
+130 silly cache afterAdd grunt@0.4.5
+131 verbose afterAdd /Users/TK/.npm/grunt/0.4.5/package/package.json not in flight; writing
+132 silly addNameTag next cb for install with tag latest
+133 silly addNamed install@0.4.2
+134 verbose addNamed "0.4.2" is a plain semver version for install
+135 verbose afterAdd /Users/TK/.npm/grunt/0.4.5/package/package.json written
+136 silly addNameTag next cb for touch with tag latest
+137 silly addNamed touch@1.0.0
+138 verbose addNamed "1.0.0" is a plain semver version for touch
+139 silly addNameTag next cb for grunt-cli with tag latest
+140 silly addNamed grunt-cli@0.1.13
+141 verbose addNamed "0.1.13" is a plain semver version for grunt-cli
+142 silly cache afterAdd install@0.4.2
+143 verbose afterAdd /Users/TK/.npm/install/0.4.2/package/package.json not in flight; writing
+144 silly cache afterAdd touch@1.0.0
+145 verbose afterAdd /Users/TK/.npm/touch/1.0.0/package/package.json not in flight; writing
+146 silly cache afterAdd grunt-cli@0.1.13
+147 verbose afterAdd /Users/TK/.npm/grunt-cli/0.1.13/package/package.json not in flight; writing
+148 silly addNameTag next cb for npm with tag latest
+149 silly addNamed npm@3.7.1
+150 verbose addNamed "3.7.1" is a plain semver version for npm
+151 verbose afterAdd /Users/TK/.npm/install/0.4.2/package/package.json written
+152 verbose afterAdd /Users/TK/.npm/touch/1.0.0/package/package.json written
+153 verbose afterAdd /Users/TK/.npm/grunt-cli/0.1.13/package/package.json written
+154 silly cache afterAdd npm@3.7.1
+155 verbose afterAdd /Users/TK/.npm/npm/3.7.1/package/package.json not in flight; writing
+156 verbose afterAdd /Users/TK/.npm/npm/3.7.1/package/package.json written
+157 http 404 https://registry.npmjs.org/gruntfile.js
+158 verbose headers { 'content-type': 'application/json',
+158 verbose headers   'cache-control': 'max-age=0',
+158 verbose headers   'content-length': '2',
+158 verbose headers   'accept-ranges': 'bytes',
+158 verbose headers   date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+158 verbose headers   via: '1.1 varnish',
+158 verbose headers   age: '0',
+158 verbose headers   connection: 'keep-alive',
+158 verbose headers   'x-served-by': 'cache-lax1431-LAX',
+158 verbose headers   'x-cache': 'MISS',
+158 verbose headers   'x-cache-hits': '0',
+158 verbose headers   'x-timer': 'S1454651842.617056,VS0,VE207' }
+159 silly get cb [ 404,
+159 silly get   { 'content-type': 'application/json',
+159 silly get     'cache-control': 'max-age=0',
+159 silly get     'content-length': '2',
+159 silly get     'accept-ranges': 'bytes',
+159 silly get     date: 'Fri, 05 Feb 2016 05:57:22 GMT',
+159 silly get     via: '1.1 varnish',
+159 silly get     age: '0',
+159 silly get     connection: 'keep-alive',
+159 silly get     'x-served-by': 'cache-lax1431-LAX',
+159 silly get     'x-cache': 'MISS',
+159 silly get     'x-cache-hits': '0',
+159 silly get     'x-timer': 'S1454651842.617056,VS0,VE207' } ]
+160 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/gruntfile.js
+160 verbose stack     at makeError (/Users/TK/.nvm/versions/node/v5.2.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+160 verbose stack     at CachingRegistryClient.<anonymous> (/Users/TK/.nvm/versions/node/v5.2.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+160 verbose stack     at Request._callback (/Users/TK/.nvm/versions/node/v5.2.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+160 verbose stack     at Request.self.callback (/Users/TK/.nvm/versions/node/v5.2.0/lib/node_modules/npm/node_modules/request/request.js:198:22)
+160 verbose stack     at emitTwo (events.js:88:13)
+160 verbose stack     at Request.emit (events.js:173:7)
+160 verbose stack     at Request.<anonymous> (/Users/TK/.nvm/versions/node/v5.2.0/lib/node_modules/npm/node_modules/request/request.js:1035:10)
+160 verbose stack     at emitOne (events.js:83:20)
+160 verbose stack     at Request.emit (events.js:170:7)
+160 verbose stack     at IncomingMessage.<anonymous> (/Users/TK/.nvm/versions/node/v5.2.0/lib/node_modules/npm/node_modules/request/request.js:962:12)
+161 verbose statusCode 404
+162 verbose pkgid gruntfile.js
+163 verbose cwd /Users/TK/Documents/projects/frontend-nanodegree-mobile-portfolio
+164 error Darwin 14.5.0
+165 error argv "/Users/TK/.nvm/versions/node/v5.2.0/bin/node" "/Users/TK/.nvm/versions/node/v5.2.0/bin/npm" "install" "-g" "grunt-cli" "npm" "install" "-save-dev" "grunt" "touch" "gruntfile.js"
+166 error node v5.2.0
+167 error npm  v2.14.15
+168 error code E404
+169 error 404 Registry returned 404 for GET on https://registry.npmjs.org/gruntfile.js
+169 error 404
+169 error 404 'gruntfile.js' is not in the npm registry.
+169 error 404 You should bug the author to publish it (or use the name yourself!)
+169 error 404
+169 error 404 Note that you can also install from a
+169 error 404 tarball, folder, http url, or git url.
+170 verbose exit [ 1, true ]
