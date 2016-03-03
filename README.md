@@ -33,7 +33,7 @@ Some useful tips to help you get started:
 -96/100 on PageSpeed Insights!
 
 
-####Part 2: Optimize Frames per Second in pizza.html
+####Part 2: Optimize Frames per Second in pizza.html (via main.js)
 a) Optimize scrolling animations to maintain >60fps
 -Baselined the page and saw that frames were taking 23-25ms each. This is well above the 10ms allotted to A(Animations) in the RAIL framework.
 -First, and most simply, I noticed that a constant of 200 background pizzas were being created and thus animated on scroll while only 18 were visible on screen. I reduced to 18 but then saw a couple background pizzas were missing now. Went back up and settled in at 22 pizzas. Measured and saw a huge improvement: frames were loading at 3.7-5.7ms each.
@@ -46,6 +46,28 @@ b) Optimize resize Pizzas to respond in under 5ms
 -First I baselined to see that a resize action was taking >100ms. Looking into Chrome dev tools timeline, it was clear that most of the jank was being caused by the changePizzaSizes function in main.js. This would be an R (Response) under the RAIL framework allowing 100ms but still...
 -I noticed a for loop which was repeatedly calculating several variables: querying the DOM for all pizzaContainers, calculating dx, and then calculating newwidth. Since I knew all of these would be constant in any particular call of the function, I moved them outside of the for loop. At this point, it was running at ~4.5ms per resize.
 -Going further, I realized that the whole dx function is unnecessary. Instead stored the output of the switch statement as the % width needed and simply applied that. This got resize to <3ms per resize.
+
+c) Changes after Code Review:
+General Changes:
+-Added 'use strict'; as good JS practice and declared variables throughout file to ensure it worked.
+
+Changes to resize Pizza code:
+-Changed from querySelector() to getElementById() to select all pizza sizes.
+-Changed from querySelectorAll to getElementsByClassName to get all pizzaContainers
+-Stored length of array in loops outside of loops to save recalculations, similarly moved
+pizzasDiv var outside of loop.
+-Down to <0.6ms per resize now - woohoo!!
+
+Changes to background Pizza code:
+-Changed from querySelectorAll to getElementsByClassName for 'mover' var
+-Moved var phase outside of it's loop. Declared len as var in loop to save recalculations.
+-**REQUIRED CHANGE** Now using height of screen to calculate number of background pizza (3 rows for 900px heigh * 8 columns = 24 background pizzas)
+-Moved 'elem' var outside of loop
+-Changed another querySelect to getElementbyId
+-Move dom element by Id var outside of loop to line 525
+-Changed css in pizza.html to use translateZ and hide backface-visibility
+-Down to ~0.25ms per frame when scrolling!
+
 
 ####Part 3: Extra-credit Optimizations
 I took the build tools class and used gulp.js to make the following optimizations:
