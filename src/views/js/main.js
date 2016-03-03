@@ -442,7 +442,10 @@ var resizePizzas = function(size) {
           console.log('bug in sizeSwitcher');
       }
       // Iterate through all pizzas and change their widths
-      var allPizzas = document.querySelectorAll('.randomPizzaContainer');
+
+      // Store randomPizzaContainers outside of loop, changed from
+      //querySelectorAll to getElementsByClassName
+      var allPizzas = document.getElementsByClassName('randomPizzaContainer');
       // Store length in len to save recalculations
       for (var i = 0, len = allPizzas.length; i < len; i++) {
         //changed from querySelectorAll to getElementsByClassName
@@ -461,7 +464,7 @@ var resizePizzas = function(size) {
 
 window.performance.mark('mark_start_generating'); // collect timing data
 
-var pizzasDiv = document.getElementById('randomPizzas');
+var pizzasDiv = document.getElementById('randomPizzas'); //getting all the pizzas outside loop
 // This for-loop actually creates and appends all of the pizzas when the page loads
 for (var i = 2; i < 100; i++) {
   pizzasDiv.appendChild(pizzaElementGenerator(i));

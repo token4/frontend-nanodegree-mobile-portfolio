@@ -56,6 +56,7 @@ Changes to resize Pizza code:
 -Changed from querySelectorAll to getElementsByClassName to get all pizzaContainers
 -Stored length of array in loops outside of loops to save recalculations, similarly moved
 pizzasDiv var outside of loop.
+-Store randomPizzaContainers outside of loop
 -Down to <0.6ms per resize now - woohoo!!
 
 Changes to background Pizza code:
